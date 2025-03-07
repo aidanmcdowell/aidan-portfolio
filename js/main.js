@@ -84,7 +84,31 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
-    // Contact section (form removed)
+    // Contact section - email copy to clipboard functionality
+    const copyEmailBtn = document.getElementById('copy-email');
+    const copyStatus = document.getElementById('copy-status');
+    
+    if (copyEmailBtn) {
+        copyEmailBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const email = copyEmailBtn.getAttribute('data-email');
+            
+            // Copy to clipboard
+            navigator.clipboard.writeText(email)
+                .then(() => {
+                    // Show the copied message
+                    copyStatus.classList.add('show');
+                    
+                    // Hide after 2 seconds
+                    setTimeout(() => {
+                        copyStatus.classList.remove('show');
+                    }, 2000);
+                })
+                .catch(err => {
+                    console.error('Failed to copy: ', err);
+                });
+        });
+    }
     
     // Scroll to section when clicking on nav links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

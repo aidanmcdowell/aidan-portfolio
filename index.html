@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Computer Science Portfolio | Web Developer Projects">
+    <title>Aidan McDowell | Tech Portfolio</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <div class="container">
+                <div class="logo">
+                    <a href="#"><span class="accent">&lt;</span>AM<span class="accent">/&gt;</span></a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero section -->
+        <section id="hero" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="terminal-header">
+                        <div class="terminal-buttons">
+                            <span class="terminal-circle red"></span>
+                            <span class="terminal-circle yellow"></span>
+                            <span class="terminal-circle green"></span>
+                        </div>
+                        <div class="terminal-title">aidan@portfolio:~</div>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="typing-text">
+                            <p><span class="command">$ whoami</span></p>
+                            <h1>Aidan McDowell</h1>
+                            <p><span class="command">$ cat about.txt</span></p>
+                            <p class="subtitle">DevOps Engineer | Software Developer | Problem Solver</p>
+                            <p><span class="command">$ location</span></p>
+                            <p>Fullerton, CA, USA | Remote</p>
+                            <div class="cta-buttons">
+                                <a href="#projects" class="btn primary">View Projects</a>
+                                <a href="#contact" class="btn secondary">Contact Me</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Hi, I'm Aidan McDowell, a computer science enthusiast graduating from California State University, Fullerton in May 2025. I love exploring new challenges—whether it's building web apps, scripting solutions, or designing games.</p>
+                        
+                        <p>With experience as a DevOps Engineer and Software Developer, I excel at troubleshooting across diverse environments, automated CI/CD pipelines, and optimizing system performance. My goal is to create impactful technology that solves real problems.</p>
+                        
+                        <p>When I'm not coding, you can find me contributing to open-source projects, mentoring junior developers, or exploring new technologies.</p>
+                        
+                        <div class="social-links">
+                            <a href="https://github.com/aidanmcdowell" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://linkedin.com/in/aidan-mcdowell-826b9722a" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="mailto:aidanm617@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <!-- Placeholder for profile image -->
+                        <div class="profile-placeholder">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects section -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section-title">Projects</h2>
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="web">Web Dev</button>
+                    <button class="filter-btn" data-filter="python">Python</button>
+                    <button class="filter-btn" data-filter="devops">DevOps</button>
+                </div>
+                <div id="no-projects-message" style="display: none; text-align: center; margin: 30px 0; color: var(--text-secondary);">
+                    No projects found in this category.
+                </div>
+                <div class="projects-grid">
+                    <!-- Project 1: File Converter -->
+                    <div class="project-card" data-category="web">
+                        <div class="project-header">
+                            <h3 class="project-title">File Converter</h3>
+                            <div class="project-links">
+                                <a href="https://github.com/aidanmcdowell/File-Converter" target="_blank" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
+                                <a href="#" target="_blank" class="demo-link" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <p class="project-description">A web-based tool for converting files between different formats, built with JavaScript and Node.js. Supports various document, image, and audio formats.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">HTML/CSS</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: SmartUp -->
+                    <div class="project-card" data-category="python">
+                        <div class="project-header">
+                            <h3 class="project-title">SmartUp</h3>
+                            <div class="project-links">
+                                <a href="https://github.com/aidanmcdowell/SmartUp-main" target="_blank" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <p class="project-description">A comprehensive study tool with flashcards, quiz functionality, and task management features. Built with Python and featuring an intuitive graphical user interface.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">UI/UX</span>
+                            <span class="tech-tag">Data Storage</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: TheBypasser -->
+                    <div class="project-card" data-category="web">
+                        <div class="project-header">
+                            <h3 class="project-title">TheBypasser</h3>
+                            <div class="project-links">
+                                <a href="https://github.com/aidanmcdowell/TheBypasser-All-Sources-" target="_blank" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <p class="project-description">A utility to bypass ad links and paywalls, improving web browsing experience by streamlining access to content. Implemented with HTML and API integration.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">API</span>
+                            <span class="tech-tag">Web Tools</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: YoinkEXE -->
+                    <div class="project-card" data-category="devops">
+                        <div class="project-header">
+                            <h3 class="project-title">YoinkEXE</h3>
+                            <div class="project-links">
+                                <a href="https://github.com/aidanmcdowell/YoinkEXE-Regular" target="_blank" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <p class="project-description">A utility application with system automation capabilities, demonstrating skills in executable development and system integration.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">System Tools</span>
+                            <span class="tech-tag">Automation</span>
+                            <span class="tech-tag">EXE Development</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 5: Data Analytics Dashboard -->
+                    <div class="project-card" data-category="web">
+                        <div class="project-header">
+                            <h3 class="project-title">Data Analytics Dashboard</h3>
+                            <div class="project-links">
+                                <a href="https://github.com/aidanmcdowell/data-dashboard" target="_blank" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
+                                <a href="#" target="_blank" class="demo-link" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <p class="project-description">A React-based analytics dashboard for visualizing complex datasets with interactive charts and customizable widgets.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">D3.js</span>
+                            <span class="tech-tag">Material-UI</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 6: Sentiment Analysis API -->
+                    <div class="project-card" data-category="python">
+                        <div class="project-header">
+                            <h3 class="project-title">Sentiment Analysis API</h3>
+                            <div class="project-links">
+                                <a href="https://github.com/aidanmcdowell/ml-sentiment-analyzer" target="_blank" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <p class="project-description">A machine learning-based API for analyzing sentiment in text data, built with Python, scikit-learn, and FastAPI.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">ML/NLP</span>
+                            <span class="tech-tag">FastAPI</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 7: TaskFlow -->
+                    <div class="project-card" data-category="web">
+                        <div class="project-header">
+                            <h3 class="project-title">TaskFlow</h3>
+                            <div class="project-links">
+                                <a href="https://github.com/aidanmcdowell/task-tracker" target="_blank" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <p class="project-description">A modern task management web app with team collaboration features, built with React, Firebase, and Tailwind CSS.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">Tailwind CSS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GitHub Activity section -->
+        <section id="github-activity" class="github-activity-section">
+            <div class="container">
+                <h2 class="section-title">GitHub Activity</h2>
+                <div class="github-activity">
+                    <div class="github-activity-header">
+                        <h3><i class="fab fa-github"></i> Recent Activity</h3>
+                        <a href="https://github.com/aidanmcdowell" target="_blank" class="github-profile-link">View Profile</a>
+                    </div>
+                    <div id="github-activity-list" class="github-activity-list">
+                        <!-- GitHub activity will be loaded here via JavaScript -->
+                        <p>Loading GitHub activity...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills section -->
+        <section id="skills" class="skills">
+            <div class="container">
+                <h2 class="section-title">Skills</h2>
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h3><i class="fas fa-code"></i> Programming Languages</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">C#</span>
+                            <span class="skill-tag">C++</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Swift</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fas fa-laptop-code"></i> Web Development</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">HTML</span>
+                            <span class="skill-tag">CSS</span>
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">Git</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fas fa-server"></i> DevOps & Infrastructure</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">AWS</span>
+                            <span class="skill-tag">CI/CD</span>
+                            <span class="skill-tag">Linux</span>
+                            <span class="skill-tag">Bash</span>
+                            <span class="skill-tag">PowerShell</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fas fa-brain"></i> Methodologies & Tools</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Agile/Scrum</span>
+                            <span class="skill-tag">Virtualization</span>
+                            <span class="skill-tag">A/B Testing</span>
+                            <span class="skill-tag">Performance Monitoring</span>
+                            <span class="skill-tag">Team Leadership</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience section -->
+        <section id="experience" class="experience">
+            <div class="container">
+                <h2 class="section-title">Experience</h2>
+                <div class="timeline">
+                    <!-- Job 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>DevOps Engineer</h3>
+                                <span class="company">Arrow</span>
+                                <span class="date">August 2024 - Present, Remote</span>
+                            </div>
+                            <ul class="job-description">
+                                <li>Design and maintain CI/CD pipelines (Jenkins, GitHub Actions) to automate builds, tests, and deployments, reducing release cycles by streamlining code integration</li>
+                                <li>Collaborate with software engineers to implement new features and manage bugs, ensuring seamless deployments and robust infrastructure</li>
+                                <li>Manage AWS services for scalable, fault-tolerant production environments, monitor system performance, identify bottlenecks, and optimize maintenance costs</li>
+                            </ul>
+                            <div class="job-skills">
+                                <span class="skill-tag small">Automation</span>
+                                <span class="skill-tag small">AWS</span>
+                                <span class="skill-tag small">CI/CD</span>
+                                <span class="skill-tag small">Teamwork</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Job 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>SEO Engineering Intern</h3>
+                                <span class="company">Now Mobile Ordering</span>
+                                <span class="date">August 2024 - January 2025, Remote</span>
+                            </div>
+                            <ul class="job-description">
+                                <li>Leveraged Google Analytics, Google Search Console, and SE Ranking to assess traffic patterns, identify growth opportunities, and refine on-page strategies</li>
+                                <li>Conducted A/B testing on elements to improve site performance (page load times, mobile responsiveness), boosting organic search rankings and user engagement</li>
+                                <li>Led API integrations to synchronize content and landing pages, increasing conversions and boosting search visibility</li>
+                            </ul>
+                            <div class="job-skills">
+                                <span class="skill-tag small">Data Analysis</span>
+                                <span class="skill-tag small">Testing</span>
+                                <span class="skill-tag small">API</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Job 3 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Web Developer Intern / Tech Lead</h3>
+                                <span class="company">National Youth Adoption Foundation</span>
+                                <span class="date">January 2024 - June 2024, Remote/Chicago, IL</span>
+                            </div>
+                            <ul class="job-description">
+                                <li>Led design, coding, development, and maintenance of the official NYAF website, ensuring optimal performance and security</li>
+                                <li>Organized cross-departmental collaboration, facilitated teams to update and fundraising event details with community partners</li>
+                                <li>Mentored interns and junior developers on best practices, coding standards, and website analytics</li>
+                            </ul>
+                            <div class="job-skills">
+                                <span class="skill-tag small">Leadership</span>
+                                <span class="skill-tag small">Web Development</span>
+                                <span class="skill-tag small">Mentoring</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="resume-download">
+                    <a href="Aidan McDowell Resume.pdf" class="btn primary download-btn" download><i class="fas fa-download"></i> Download Resume</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Contact</h2>
+                <div class="contact-content">
+                    <div class="contact-text">
+                        <p>Let's connect about tech, projects, or opportunities! I'm always open to discussing new ideas and collaborations.</p>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:aidanm617@gmail.com">aidanm617@gmail.com</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fab fa-linkedin"></i>
+                                <a href="https://linkedin.com/in/aidan-mcdowell-826b9722a" target="_blank">linkedin.com/in/aidan-mcdowell-826b9722a</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fab fa-github"></i>
+                                <a href="https://github.com/aidanmcdowell" target="_blank">github.com/aidanmcdowell</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Fullerton, CA, USA</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Aidan McDowell. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="https://github.com/aidanmcdowell" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/aidan-mcdowell-826b9722a" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:aidanm617@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

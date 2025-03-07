@@ -1,27 +1,5 @@
 // Main JavaScript for Aidan McDowell's Portfolio
 
-// Try to import GitHub integration module (will only work if modules are supported)
-let githubModule = null;
-try {
-    import('./github-integration.js')
-        .then(module => {
-            githubModule = module;
-            // Call the displayGitHubActivity function if successfully imported
-            if (typeof githubModule.displayGitHubActivity === 'function') {
-                githubModule.displayGitHubActivity('github-activity-list');
-            }
-        })
-        .catch(error => {
-            console.warn('GitHub module import failed:', error);
-            // Fall back to the simulation function
-            fetchGitHubActivity();
-        });
-} catch (error) {
-    console.warn('ES modules not supported, using fallback:', error);
-    // Fall back to the simulation function
-    fetchGitHubActivity();
-}
-
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize functionality when the DOM is fully loaded
     console.log('Portfolio website loaded');
@@ -189,80 +167,6 @@ function fadeInElements() {
     elements.forEach(element => {
         observer.observe(element);
     });
-}
-
-// Simulate GitHub activity fetch
-function fetchGitHubActivity() {
-    // In a real application, you would fetch data from GitHub API
-    // This is a simulation for demonstration purposes
-    
-    const activityData = [
-        {
-            type: 'push',
-            repo: 'data-dashboard',
-            time: '3 days ago',
-            description: 'Added new visualization widgets'
-        },
-        {
-            type: 'star',
-            repo: 'File-Converter',
-            time: '1 week ago',
-            description: 'Project starred by 5 users'
-        },
-        {
-            type: 'fork',
-            repo: 'ml-sentiment-analyzer',
-            time: '2 weeks ago',
-            description: 'Project forked by another developer'
-        },
-        {
-            type: 'push',
-            repo: 'task-tracker',
-            time: '3 weeks ago',
-            description: 'Implemented user authentication'
-        }
-    ];
-    
-    // Check if the GitHub activity section exists
-    const activityContainer = document.querySelector('.github-activity-list');
-    if (!activityContainer) return;
-    
-    // Clear existing content
-    activityContainer.innerHTML = '';
-    
-    // Add activity items
-    activityData.forEach(activity => {
-        const icon = getActivityIcon(activity.type);
-        
-        const activityItem = document.createElement('div');
-        activityItem.className = 'activity-item';
-        activityItem.innerHTML = `
-            <div class="activity-icon">
-                <i class="${icon}"></i>
-            </div>
-            <div class="activity-content">
-                <div class="activity-repo">${activity.repo}</div>
-                <div class="activity-description">${activity.description}</div>
-                <div class="activity-time">${activity.time}</div>
-            </div>
-        `;
-        
-        activityContainer.appendChild(activityItem);
-    });
-}
-
-// Get icon for activity type
-function getActivityIcon(type) {
-    switch (type) {
-        case 'push':
-            return 'fas fa-code-branch';
-        case 'star':
-            return 'fas fa-star';
-        case 'fork':
-            return 'fas fa-code-branch';
-        default:
-            return 'fas fa-code';
-    }
 }
 
 // Add animation to burger menu for mobile navigation

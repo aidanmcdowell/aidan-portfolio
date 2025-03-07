@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const nav = document.querySelector('.nav-links');
     const filterBtns = document.querySelectorAll('.filter-btn');
     const projectCards = document.querySelectorAll('.project-card');
-    const contactForm = document.getElementById('contactForm');
     
     // Initialize animations
     initTypewriterEffect();
@@ -85,33 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
-    // Contact form submission
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            // Get form values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            
-            // Basic validation
-            if (!name || !email || !message) {
-                alert('Please fill in all fields');
-                return;
-            }
-            
-            // In a real application, you would send the form data to a server
-            // For demonstration, let's just log it and show a success message
-            console.log('Form submitted:', { name, email, message });
-            
-            // Show success message
-            alert('Thank you for your message! I will get back to you soon.');
-            
-            // Reset form
-            contactForm.reset();
-        });
-    }
+    // Contact section (form removed)
     
     // Scroll to section when clicking on nav links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

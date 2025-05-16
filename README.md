@@ -27,8 +27,6 @@ This is my final project for CPSC 349. It's a personal portfolio website that sh
 - Tailwind CSS  
 - Hosted on Vercel
 
-> ⚠️ This project does not use React or any JS framework, following project guidelines.
-
 ---
 
 ## 🖥 How to Run This Project

@@ -13,6 +13,8 @@ git clone https://github.com/your-username/your-repo-name.git
 2. Create vercel.com account and link GitHub account
 3. Select cloned repo, and deploy
 
+---
+
 ## 🔗 Live Site
 
 [https://aidanmcdowell.vercel.app](https://aidanmcdowell.vercel.app)

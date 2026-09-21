@@ -32,7 +32,7 @@ yarn-error.log
 .env.production.local
 
 # Build files (if build process is added in the future)
-/dist
+# /dist
 /build
 
 # Logs

@@ -27,9 +27,9 @@ export const Hero: React.FC = () => {
 
           {/* Main Title & Subtitle */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.1] mb-6">
-            Lead Software Engineer <br className="hidden sm:inline" />
+            Software Engineer <br className="hidden sm:inline" />
             <span className="bg-gradient-to-r from-zinc-200 via-zinc-400 to-zinc-500 bg-clip-text text-transparent">
-              &amp; Cloud Architect
+              &amp; System Applications Architect
             </span>
           </h1>
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Copy, Check, Github, Linkedin, ArrowUpRight, MapPin, Send } from 'lucide-react';
+import { Mail, Copy, Check, Github, Linkedin, ArrowUpRight, MapPin } from 'lucide-react';
 
 export const Contact: React.FC = () => {
   const [copied, setCopied] = useState(false);
@@ -35,15 +35,15 @@ export const Contact: React.FC = () => {
           </p>
 
           {/* Email Copy Card */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-md mx-auto mb-10">
-            <div className="flex items-center justify-between w-full px-4 py-3 rounded-xl bg-zinc-950/90 border border-zinc-800 text-sm font-mono text-zinc-300">
+          <div className="flex items-center justify-center max-w-sm mx-auto mb-10">
+            <div className="flex items-center justify-between w-full px-4 py-3 rounded-xl bg-zinc-950/90 border border-zinc-800 text-sm font-mono text-zinc-300 shadow-inner">
               <div className="flex items-center gap-2.5 truncate">
                 <Mail className="w-4 h-4 text-emerald-400 shrink-0" />
                 <span className="truncate">{email}</span>
               </div>
               <button
                 onClick={handleCopyEmail}
-                className="ml-3 p-1.5 rounded-lg text-zinc-400 hover:text-white bg-zinc-800/80 hover:bg-zinc-750 transition-colors shrink-0 flex items-center gap-1.5 text-xs font-sans font-medium"
+                className="ml-3 p-1.5 px-2.5 rounded-lg text-zinc-300 hover:text-white bg-zinc-800/80 hover:bg-zinc-750 transition-colors shrink-0 flex items-center gap-1.5 text-xs font-sans font-medium border border-zinc-700/60 hover:border-emerald-500/40"
                 title="Copy email to clipboard"
               >
                 {copied ? (
@@ -53,20 +53,12 @@ export const Contact: React.FC = () => {
                   </>
                 ) : (
                   <>
-                    <Copy className="w-3.5 h-3.5" />
+                    <Copy className="w-3.5 h-3.5 text-zinc-400" />
                     <span>Copy</span>
                   </>
                 )}
               </button>
             </div>
-
-            <a
-              href={`mailto:${email}`}
-              className="w-full sm:w-auto px-5 py-3 rounded-xl text-sm font-semibold text-black bg-zinc-100 hover:bg-white hover:shadow-[0_0_20px_rgba(255,255,255,0.2)] transition-all flex items-center justify-center gap-2 shrink-0"
-            >
-              <span>Compose</span>
-              <Send className="w-3.5 h-3.5" />
-            </a>
           </div>
 
           {/* Social Channels Strip */}

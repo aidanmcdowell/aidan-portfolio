@@ -17,7 +17,7 @@ git clone https://github.com/your-username/your-repo-name.git
 
 ## 🔗 Live Site
 
-[https://aidanmcdowell.vercel.app](https://aidanmcdowell.vercel.app)
+[https://aidanmcdowell.pages.dev](https://aidanmcdowell.pages.dev)
 
 ---
 
@@ -29,16 +29,6 @@ git clone https://github.com/your-username/your-repo-name.git
 - **Skills**: Grouped by category (Languages, Web Dev, DevOps, etc.)
 - **Experience**: Work history with dates and responsibilities
 - **Contact**: Email, social links, location, and contact form
-
----
-
-## 🛠 Tech Stack
-
-- HTML5  
-- CSS3  
-- JavaScript  
-- Tailwind CSS  
-- Hosted on Vercel
 
 ---
 
